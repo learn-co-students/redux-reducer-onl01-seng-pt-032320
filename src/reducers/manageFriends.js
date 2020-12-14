@@ -1,10 +1,12 @@
-export function manageFriends(state, action){
-    switch(action.type) {
-        case "ADD_FRIEND":
-            return {friend: name.count + 1}
-            case "REMOVE_FRIEND":
-                return {count: state.count - 1}
-                default:
-                    return state;
+export function manageFriends(state={friends: []}, action) {
+    switch (action.type) {
+         case 'ADD_FRIEND':
+              state.friends.push(action.friend)
+              return { friends: state.friends}
+         case 'REMOVE_FRIEND':
+              const unremovedFriends = state.friends.filter(friend => friend.id !== action.id)
+              return { friends: unremovedFriends }
+         default:
+              return state
     }
 }
