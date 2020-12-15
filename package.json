@@ -35,7 +35,10 @@
     "sinon": "^1.17.6"
   },
   "dependencies": {
-    "react": "^15.3.0",
+    "react": "^15.7.0",
     "react-dom": "^15.3.0"
+  },
+  "directories": {
+    "test": "test"
   }
 }
