@@ -2,10 +2,10 @@ export function manageFriends(state = {friends: [] }, action){
 
     switch (action.type) {
         case 'ADD_FRIEND':
-          return ({...state, friends: [...state.friends, action.friend]})
+          return ({...state, friends: [...state.friends, action.friend]}) //action has a friend property
 
         case 'REMOVE_FRIEND':
-            const index = state.friends.findIndex(n => n.id === action.id)
+            const index = state.friends.findIndex(n => n.id === action.id) //action has an id property
 
             return ({...state, friends: [                 //initial array = arr=[0,1,2] ...... 
                         ...state.friends.slice(0, index), //returns [0 - index] but not including index -> only return arr[0]
