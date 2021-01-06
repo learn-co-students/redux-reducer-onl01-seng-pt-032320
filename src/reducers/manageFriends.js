@@ -6,7 +6,7 @@ export function manageFriends(state, action){
                 hometown: state.hometown,
                 id: state.id
                 }
-            return {newFriend}
+            return {...state, newFriend}
 
         case 'REMOVE_FRIEND':
             return state.map(thing => thing.id != action.id)
